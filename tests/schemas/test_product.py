@@ -26,5 +26,6 @@ def test_schema_validated_return_failure():
         'type': 'missing',
         'loc': ('status',),
         'msg': 'Field required',
-        'input': {'name': 'Input'}
+        'input': {'name': 'Iphone 14 Pro Max', 'quantity': 10, 'price': 8.5},
+        'url': 'https://errors.pydantic.dev/2.5/v/missing',
     }
