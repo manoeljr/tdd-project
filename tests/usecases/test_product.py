@@ -35,7 +35,13 @@ async def test_usecases_query_should_return_success():
 
 
 async def test_usecases_update_should_return_success(product_id, product_up):
+    product_up.price = 7.500
     result = await usecase.update(id=product_id, body=product_up)
 
     assert isinstance(result, ProductOut)
 
+
+async def test_usecases_delete_should_return_success(product_id):
+    result = await usecase.delete(id=product_id)
+
+    assert result is True
